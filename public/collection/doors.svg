@@ -1,0 +1,29 @@
+<svg width="960" height="1200" viewBox="0 0 960 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="1200" fill="#DFD8CD"/>
+  <rect x="0" y="0" width="960" height="1200" fill="url(#bg)"/>
+  <rect x="28" y="0" width="116" height="1200" fill="#50615B"/>
+  <rect x="164" y="0" width="480" height="1200" fill="#2F2929"/>
+  <rect x="680" y="0" width="110" height="1200" fill="#65706C"/>
+  <rect x="814" y="0" width="92" height="1200" fill="#334239"/>
+  <rect x="790" y="0" width="24" height="1200" fill="#AEB7BA"/>
+  <rect x="0" y="822" width="960" height="378" fill="url(#floor)"/>
+  <rect x="0" y="0" width="960" height="170" fill="url(#topFade)"/>
+  <path d="M821 135L821 1114" stroke="#1A1A1A" stroke-width="8"/>
+  <path d="M853 135L853 1114" stroke="#4D4D4D" stroke-width="4"/>
+  <rect x="624" y="162" width="166" height="386" fill="#F8F8F5"/>
+  <rect x="640" y="180" width="132" height="350" fill="#F0F1ED"/>
+  <defs>
+    <linearGradient id="bg" x1="480" y1="0" x2="480" y2="1200" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D8D2C9"/>
+      <stop offset="1" stop-color="#CFC8BD"/>
+    </linearGradient>
+    <linearGradient id="floor" x1="480" y1="822" x2="480" y2="1200" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E9E4DB"/>
+      <stop offset="1" stop-color="#D4CDC1"/>
+    </linearGradient>
+    <linearGradient id="topFade" x1="480" y1="0" x2="480" y2="170" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7B856F" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#7B856F" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+</svg>
