@@ -1,12 +1,16 @@
 import AboutSection from "@/components/about";
 
-import ProductCollection from "@/components/productCollection";
+
+
+import Products from "@/components/products";
 
 export default function Home() {
   return (
     <main>
       <AboutSection />
-      <ProductCollection />
+     
+      <Products />
+      
     </main>
   );
 }
