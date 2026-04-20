@@ -1,206 +1,112 @@
 "use client";
 
-export default function Products() {
+import React from "react";
+
+export default function ProductCollection() {
   return (
-    <>
-      <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;600&family=DM+Mono:wght@400;500&display=swap');
-
-        .pc-section {
-          background-color: #EDEAE3;
-          width: 100%;
-          min-height: 760px;
-          position: relative;
-          padding: 28px 44px 80px 44px;
-          box-sizing: border-box;
-          font-family: 'DM Sans', sans-serif;
-        }
-
-        /* ◆ PRODUCT COLLECTION — top left */
-        .pc-label {
-          display: flex;
-          align-items: center;
-          gap: 8px;
-          font-family: 'DM Mono', monospace;
-          font-size: 11px;
-          font-weight: 400;
-          letter-spacing: 0.20em;
-          text-transform: uppercase;
-          color: #1a1a1a;
-          margin-bottom: 0;
-        }
-
-        /* Thin rule under label */
-        .pc-rule {
-          width: 100%;
-          height: 1px;
-          background-color: #c8c5be;
-          margin: 18px 0 0 0;
-        }
-
-        /* Main content row */
-        .pc-body {
-          display: flex;
-          align-items: flex-start;
-          justify-content: center;
-          margin-top: 88px;
-          gap: 0;
-        }
-
-        /* Left spacer to push image to center-left */
-        .pc-left-spacer {
-          flex: 1;
-          min-width: 0;
-        }
-
-        /* Portrait image container */
-        .pc-image-wrap {
-          position: relative;
-          width: 420px;
-          height: 510px;
-          flex-shrink: 0;
-          overflow: hidden;
-          background: #2a2520;
-        }
-
-        .pc-image-wrap img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          object-position: center;
-          display: block;
-        }
-
-        /* "Doors" label overlaid on image */
-        .pc-image-title {
-          position: absolute;
-          bottom: 50%;
-          left: 50%;
-          transform: translate(-50%, 50%);
-          color: #ffffff;
-          font-family: 'DM Sans', sans-serif;
-          font-weight: 300;
-          font-size: 36px;
-          letter-spacing: 0.01em;
-          pointer-events: none;
-          white-space: nowrap;
-        }
-
-        /* Right content block */
-        .pc-right {
-          flex-shrink: 0;
-          width: 300px;
-          margin-left: 100px;
-          padding-top: 110px; /* vertically aligns text to image mid-area */
-        }
-
-        .pc-desc {
-          font-family: 'DM Sans', sans-serif;
-          font-size: 18px;
-          font-weight: 400;
-          line-height: 1.6;
-          color: #1a1a1a;
-          margin: 0 0 48px 0;
-          letter-spacing: -0.01em;
-        }
-
-        .pc-desc strong {
-          font-weight: 600;
-        }
-
-        .pc-btn {
-          display: inline-flex;
-          align-items: center;
-          gap: 10px;
-          background-color: #1a1a1a;
-          color: #EDEAE3;
-          font-family: 'DM Mono', monospace;
-          font-size: 11px;
-          font-weight: 500;
-          letter-spacing: 0.18em;
-          text-transform: uppercase;
-          padding: 15px 22px;
-          border: none;
-          cursor: pointer;
-          transition: background-color 0.25s ease;
-          white-space: nowrap;
-        }
-
-        .pc-btn:hover {
-          background-color: #333;
-        }
-
-        /* Right trailing spacer */
-        .pc-right-spacer {
-          flex: 0.4;
-          min-width: 0;
-        }
-      `}</style>
-
-      <section className="pc-section">
-
-        {/* ◆ PRODUCT COLLECTION — top left */}
-        <div className="pc-label">
-          <svg width="7" height="7" viewBox="0 0 7 7" fill="currentColor">
-            <path d="M3.5 0L4.55 2.45L7 3.5L4.55 4.55L3.5 7L2.45 4.55L0 3.5L2.45 2.45L3.5 0Z" />
-          </svg>
+    <main className="relative w-full min-h-[1800px] bg-[#F4F1EA] text-[#1a1a1a] font-sans px-6 md:px-12 py-10 overflow-x-hidden">
+      
+      {/* ── TOP NAV / LABEL ── */}
+      <div className="max-w-[1440px] mx-auto border-t border-[#D1CEC7] pt-6 flex items-center gap-2">
+        <div className="w-2 h-2 rotate-45 bg-black" />
+        <span className="text-[10px] font-bold tracking-[0.3em] uppercase">
           Product Collection
-        </div>
+        </span>
+      </div>
 
-        {/* Thin horizontal rule */}
-        <div className="pc-rule" />
+      <div className="max-w-[1440px] mx-auto relative mt-20">
+        
+        {/* ── SECTION 1: DOORS & DESCRIPTION ── */}
+        <div className="grid grid-cols-12 gap-4 items-start">
+          {/* Spacer */}
+          <div className="col-span-1" />
 
-        {/* Main body */}
-        <div className="pc-body">
-
-          {/* Left spacer */}
-          <div className="pc-left-spacer" />
-
-          {/* Portrait image */}
-          <div className="pc-image-wrap">
-            {/* Replace src with your actual image path */}
-            <img
-              src="/images/doors.jpg"
-              alt="Doors product"
-            />
-            {/* "Doors" text centered on image */}
-            <span className="pc-image-title">Doors</span>
+          {/* Main Doors Image (Center-ish) */}
+          <div className="col-span-6 flex justify-center">
+            <div className="relative w-full max-w-[420px] aspect-[3/4] overflow-hidden">
+              <img
+                src="/images/doors.jpg" 
+                alt="Doors"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black/5" />
+              <h2 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-5xl font-light tracking-tight">
+                Doors
+              </h2>
+            </div>
           </div>
 
-          {/* Right text + button */}
-          <div className="pc-right">
-            <p className="pc-desc">
-              Our <strong>glazing collection</strong> is defined by
-              exceptional craftsmanship, refined design, and enduring
-              quality. Made for bold architecture and uncompromising vision.
+          {/* Text Content (Right) */}
+          <div className="col-span-4 pt-20 pl-8">
+            <p className="text-[15px] leading-relaxed max-w-[280px] mb-10 text-[#333]">
+              Our <span className="font-bold">glazing collection</span> is defined by
+              exceptional craftsmanship, refined design, and enduring quality. Made
+              for bold architecture and uncompromising vision.
             </p>
-
-            <button className="pc-btn">
-              {/* ↳ arrow */}
-              <svg
-                width="14"
-                height="12"
-                viewBox="0 0 14 12"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M1 1.5V6.5H11.5M11.5 6.5L7.5 2.5M11.5 6.5L7.5 10.5"
-                  stroke="currentColor"
-                  strokeWidth="1.4"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-              Product Overview
+            
+            <button className="bg-black text-white px-5 py-3 flex items-center gap-6 group hover:bg-[#222] transition-colors">
+              <div className="flex flex-col">
+                 <svg width="18" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M7 17L17 7M17 7H8M17 7V16" />
+                 </svg>
+              </div>
+              <span className="text-[9px] font-bold tracking-[0.3em] uppercase">
+                Product Overview
+              </span>
             </button>
           </div>
-
-          {/* Right spacer */}
-          <div className="pc-right-spacer" />
-
         </div>
-      </section>
-    </>
+
+        {/* ── SECTION 2: STAGGERED BOTTOM IMAGES ── */}
+        
+        {/* Windows - Right Side (Higher up) */}
+        <div className="absolute top-[600px] right-0 w-[350px] aspect-[3/4] z-10">
+          <div className="relative w-full h-full overflow-hidden">
+            <img src="/images/windows.jpg" alt="Windows" className="w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-black/5" />
+            <h3 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-light">
+              Windows
+            </h3>
+          </div>
+        </div>
+
+        {/* Structural - Center (Lower) */}
+        <div className="absolute top-[850px] left-1/2 -translate-x-1/2 w-[300px] aspect-[4/5] z-10">
+          <div className="relative w-full h-full overflow-hidden">
+            <img src="/images/structural.jpg" alt="Structural" className="w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-black/5" />
+            <h3 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-3xl font-light">
+              Structural
+            </h3>
+          </div>
+        </div>
+
+        {/* Additional - Left Side (Lowest) */}
+        <div className="absolute top-[1050px] left-0 w-[360px] aspect-[3/4] z-10">
+          <div className="relative w-full h-full overflow-hidden">
+            <img src="/images/additional.jpg" alt="Additional" className="w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-black/5" />
+            <h3 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-light">
+              Additional
+            </h3>
+          </div>
+        </div>
+
+      </div>
+
+      {/* ── STICKY NAV BAR (Bottom Center) ── */}
+      <nav className="fixed bottom-10 left-1/2 -translate-x-1/2 bg-[#2D2E30] text-white px-8 py-3 flex items-center gap-12 rounded-sm shadow-2xl z-50">
+        <div className="w-5 h-5 border border-white/40 flex items-center justify-center rotate-45">
+          <div className="w-2 h-2 bg-white" />
+        </div>
+        <button className="uppercase text-[9px] tracking-[0.4em] font-bold">
+          Home
+        </button>
+        <button className="flex flex-col gap-[4px] opacity-80 hover:opacity-100 transition-opacity">
+          <span className="w-5 h-[1.2px] bg-white"></span>
+          <span className="w-5 h-[1.2px] bg-white"></span>
+        </button>
+      </nav>
+    </main>
   );
 }
