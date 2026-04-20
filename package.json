@@ -1,0 +1,28 @@
+{
+  "name": "architectx",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm -r dev",
+    "build": "pnpm -r build",
+    "check-types": "pnpm -r check-types",
+    "dev:web": "pnpm --filter web dev",
+    "check": "biome check --write ."
+  },
+  "dependencies": {
+    "@architectx/env": "workspace:*",
+    "dotenv": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@architectx/config": "workspace:*",
+    "@biomejs/biome": "^2.2.0",
+    "@types/node": "^22.13.14",
+    "typescript": "catalog:"
+  },
+  "packageManager": "pnpm@10.33.0"
+}
