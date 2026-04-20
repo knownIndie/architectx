@@ -1,0 +1,24 @@
+<svg width="960" height="1200" viewBox="0 0 960 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="1200" fill="#E5DED1"/>
+  <rect x="0" y="0" width="960" height="1200" fill="url(#sky)"/>
+  <path d="M96 1040L466 120H666L296 1040H96Z" fill="#B8774C"/>
+  <path d="M332 1040L702 120H826L456 1040H332Z" fill="#7F593B"/>
+  <path d="M216 1040L586 120H636L266 1040H216Z" fill="#D8B88F"/>
+  <rect x="264" y="282" width="398" height="528" fill="#1D2A2E"/>
+  <rect x="284" y="302" width="358" height="488" fill="url(#glass)"/>
+  <path d="M0 930C118 862 212 842 356 868C536 901 672 889 960 792V1200H0V930Z" fill="#4D653E"/>
+  <path d="M0 1008C146 956 304 952 446 978C602 1006 756 994 960 934V1200H0V1008Z" fill="#2E4A2F"/>
+  <rect x="0" y="1040" width="960" height="160" fill="#8E5C46"/>
+  <defs>
+    <linearGradient id="sky" x1="480" y1="0" x2="480" y2="880" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7F5F0"/>
+      <stop offset="0.55" stop-color="#C6D2DC"/>
+      <stop offset="1" stop-color="#8798A6"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="463" y1="302" x2="463" y2="790" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FBFF"/>
+      <stop offset="0.42" stop-color="#CAD7E1"/>
+      <stop offset="1" stop-color="#8CA1AF"/>
+    </linearGradient>
+  </defs>
+</svg>
