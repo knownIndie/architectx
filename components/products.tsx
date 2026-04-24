@@ -5,7 +5,7 @@ import React from "react";
 export default function ProductCollection() {
   return (
     <main className="relative w-full min-h-[1800px] bg-[#F4F1EA] text-[#1a1a1a] font-sans px-6 md:px-12 py-10 overflow-x-hidden">
-      
+
       {/* ── TOP NAV / LABEL ── */}
       <div className="max-w-[1440px] mx-auto border-t border-[#D1CEC7] pt-6 flex items-center gap-2">
         <div className="w-2 h-2 rotate-45 bg-black" />
@@ -15,7 +15,7 @@ export default function ProductCollection() {
       </div>
 
       <div className="max-w-[1440px] mx-auto relative mt-20">
-        
+
         {/* ── SECTION 1: DOORS & DESCRIPTION ── */}
         <div className="grid grid-cols-12 gap-4 items-start">
           {/* Spacer */}
@@ -25,7 +25,7 @@ export default function ProductCollection() {
           <div className="col-span-6 flex justify-center">
             <div className="relative w-full max-w-[420px] aspect-[3/4] overflow-hidden">
               <img
-                src="/images/doors.jpg" 
+                src="/images/doors.jpg"
                 alt="Doors"
                 className="w-full h-full object-cover"
               />
@@ -43,12 +43,12 @@ export default function ProductCollection() {
               exceptional craftsmanship, refined design, and enduring quality. Made
               for bold architecture and uncompromising vision.
             </p>
-            
+
             <button className="bg-black text-white px-5 py-3 flex items-center gap-6 group hover:bg-[#222] transition-colors">
               <div className="flex flex-col">
-                 <svg width="18" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M7 17L17 7M17 7H8M17 7V16" />
-                 </svg>
+                <svg width="18" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M7 17L17 7M17 7H8M17 7V16" />
+                </svg>
               </div>
               <span className="text-[9px] font-bold tracking-[0.3em] uppercase">
                 Product Overview
@@ -58,7 +58,7 @@ export default function ProductCollection() {
         </div>
 
         {/* ── SECTION 2: STAGGERED BOTTOM IMAGES ── */}
-        
+
         {/* Windows - Right Side (Higher up) */}
         <div className="absolute top-[600px] right-0 w-[350px] aspect-[3/4] z-10">
           <div className="relative w-full h-full overflow-hidden">
